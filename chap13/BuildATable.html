@@ -53,6 +53,9 @@
                 var value = MOUNTAINS[i][data];
                 var text = document.createTextNode(value);
                 tableData.appendChild(text);
+                //if cells contains a number then right align
+                if (!isNaN(MOUNTAINS[i][data]))
+                    tableData.style.textAlign = "right";
             }
         }
         return table;
