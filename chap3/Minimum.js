@@ -4,3 +4,9 @@ function minimum (a, b) {
 	else
 		return b;
 }
+
+
+//with the conditional operator
+function minimum (a, b) {
+    return a < b ? a : b;
+}
