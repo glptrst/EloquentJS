@@ -14,15 +14,8 @@ function reverseArray(array) {
 	return reversed;
 }
 
-//reverseArrayInPlace easy version...
-function reverseArrayInPlace(array) {
-    var reversed = [];
-    for (var i = 0; i < array.length; i++) {
-        reversed.unshift(array[i]);
-    }
-    array1 = reversed;
-}
-//author version
+
+//reverse array in place (author's code)
 function reverseArrayInPlace(array) {
     for (var i = 0; i < array.length / 2; i++) {
         var temp = array[i];

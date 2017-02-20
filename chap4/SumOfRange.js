@@ -35,3 +35,16 @@ function range2 (start, end, step) {
 
     return arr;
 }
+// alternatively
+var range2 = function (start, end) {
+  var arr = [];
+
+  if (arguments[2] !== undefined) {
+      for (var i = start; i >= end; i += arguments[2])
+          arr.push(i);
+  } else {
+      for (var i = start; i <= end; i++)
+	  arr.push(i);
+  }
+  return arr;
+}
