@@ -18,10 +18,10 @@ function listToArray(list) {
     var array = []; 
     
     while(true) {
-    	//unshift the value in the array and delete the last element of the list
+    	//push the first value in the array and delete the element of the list
         array.push(list.value);
         list = list.rest;
-        //if rest is null we reached the first element of the list, we do the unshift for the last time
+        //if rest is null we reached the last element of the list
         if (list.rest === null) {
             array.push(list.value);
             break;
@@ -30,7 +30,7 @@ function listToArray(list) {
     
     return array;
 }
-//author version (it exactly the same operation but shorter wat of coding it)
+//Author's version (exactly the same operation but shorter way of coding it)
 function listToArray(list) {
     var array = [];
     
@@ -41,7 +41,6 @@ function listToArray(list) {
     return array;
 }
 
-
 function prepend(element, list) {
 	var newList = {
 		value: element,
@@ -50,7 +49,7 @@ function prepend(element, list) {
 	return newList;
 }
 
-//basandoci su listToArray
+//On the grounds of listToArray
 function nth(list, number) {
     var array = [];
     
@@ -61,7 +60,7 @@ function nth(list, number) {
     return array[number];
 }
 
-//versione ricorsiva
+//Recursive version
 function nthR(list, number) {
     if (number == 0) {
         return list.value;
@@ -72,7 +71,7 @@ function nthR(list, number) {
         return nthR(list, number);
     }
 }
-//author's version
+//Author's version
 function nth(list, n) {
   if (!list)
     return undefined;
